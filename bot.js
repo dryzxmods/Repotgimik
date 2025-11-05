@@ -42,9 +42,9 @@ class TelegramUnlimitedBot {
         
         this.config = {
             botToken: '8549748967:AAFdAMPWNZlcbWwFwm_UPJFMQx5-xRivrqo', // Token bot Telegram akan dimasukkan oleh user
-            ownerId: '7532272726', // ID pemilik bot
-            botName: 'Tʀᴀᴄᴇʟᴇss Kɪʟʟᴇʀ',
-            contactEmail: 'dryzxmods@gmail.com',
+            ownerId: '628999859595', // ID pemilik bot
+            botName: '🤖 LORDHOZOO UNLIMITED BOT v8.0',
+            contactEmail: 'lordhozoo8@gmail.com',
             maxConcurrent: 15,
             timeout: 30000,
             proxySources: [
@@ -199,18 +199,19 @@ class TelegramUnlimitedBot {
 
     async showEnhancedBanner() {
         console.log(chalk.green(`
-┌───────────────────────────── ʚɞ
-├──── ▢ 「 Tʀᴀᴄᴇʟᴇss Kɪʟʟᴇʀ Vᴠɪᴘ 」
-├── ▢ Hᴏʟᴀᴀ ʙʀᴏᴏ
-│─ Sᴄʀɪᴘᴛ : Tʀᴀᴄᴇʟᴇss Kɪʟʟᴇʀ
-│─ Dᴇᴠᴇʟᴏᴘᴇʀ : @DryzxModders 
-│─ Vᴇʀsɪᴏɴ : 1.0
-│─ Gᴇɴᴇʀᴀsɪ : 2 
-│─ Sᴛᴀᴛᴜs Usᴇʀ : Pʀᴇᴍɪᴜᴍ
-│─ ʀᴜɴᴛɪᴍᴇ : ${moment().format('DD/MM/YYYY HH:mm:ss')}
-│─ Mᴏᴅᴇʟ : Jᴀᴠᴀ Sᴄʀɪᴘᴛ
-│
-└──────────────────────────╴`));
+╔══════════════════════════════════════════════════════════════╗
+║                   🦊 LORDHOZOO UNLIMITED BOT v8.0           ║
+║                   TELEGRAM BOT EDITION                      ║
+║               TELEGRAM + TIKTOK + UNLIMITED MODE            ║
+╠══════════════════════════════════════════════════════════════╣
+║ 📅 Date      : ${moment().format('DD/MM/YYYY HH:mm:ss')}              ║
+║ 👑 Owner     : ${this.config.ownerId}                       ║
+║ 🌐 Proxies   : ${this.proxyList.length} loaded                        ║
+║ ⚡ Mode      : ${this.mode.toUpperCase().replace('--', '')} - ENHANCED      ║
+║ 🔧 Platform  : ${this.isTermux ? 'Termux' : 'Desktop'}                 ║
+║ 🤖 Platform  : Telegram Bot API                              ║
+╚══════════════════════════════════════════════════════════════╝
+        `));
     }
 
     async loadProxyList() {
@@ -307,27 +308,17 @@ class TelegramUnlimitedBot {
         // Start command
         this.bot.start((ctx) => {
             const welcomeText = `
-┌─────────────────────────────◇
-├──── ▢ 「 Tʀᴀᴄᴇʟᴇss Kɪʟʟᴇʀ Vᴠɪᴘ 」
-├── ▢ Hᴏʟᴀᴀ ʙʀᴏᴏ
-│─ Sᴄʀɪᴘᴛ : Tʀᴀᴄᴇʟᴇss Kɪʟʟᴇʀ
-│─ Dᴇᴠᴇʟᴏᴘᴇʀ : @DryzxModders 
-│─ Vᴇʀsɪᴏɴ : 1.0
-│─ Gᴇɴᴇʀᴀsɪ : 2 
-│─ Sᴛᴀᴛᴜs Usᴇʀ : Pʀᴇᴍɪᴜᴍ
-│─ Mᴏᴅᴇʟ : Jᴀᴠᴀ Sᴄʀɪᴘᴛ
-│
-└─────────────────────────◇   
+🤖 *${this.config.botName}*
 
-┌─────────────────────────────◇
-│ ᯓ /menu
-│ 
-│ ᯓ Penjelasan :
-│     • TikTok Mass Report
-│     • Unlimited Operations
-│     • Mass Contact
-│     • Proxy Rotation
-└─────────────────────────◇
+Selamat datang! Saya adalah bot unlimited multifungsi.
+
+📋 *Fitur Utama:*
+• TikTok Mass Report
+• Unlimited Operations  
+• Mass Contact
+• Proxy Rotation
+
+Ketik /menu untuk melihat daftar command lengkap.
             `.trim();
             
             ctx.replyWithMarkdown(welcomeText);
@@ -380,41 +371,34 @@ class TelegramUnlimitedBot {
         const isOwner = ctx.from.id.toString() === this.config.ownerId;
         
         const menuText = `
-┌─────────────────────────────◇
-├──── ▢ 「 Tʀᴀᴄᴇʟᴇss Kɪʟʟᴇʀ Vᴠɪᴘ 」
-├── ▢ Hᴏʟᴀᴀ ʙʀᴏᴏ
-│─ Sᴄʀɪᴘᴛ : Tʀᴀᴄᴇʟᴇss Kɪʟʟᴇʀ
-│─ Dᴇᴠᴇʟᴏᴘᴇʀ : @DryzxModders 
-│─ Vᴇʀsɪᴏɴ : 1.0
-│─ Gᴇɴᴇʀᴀsɪ : 2 
-│─ Sᴛᴀᴛᴜs Usᴇʀ : Pʀᴇᴍɪᴜᴍ
-│─ Mᴏᴅᴇʟ : Jᴀᴠᴀ Sᴄʀɪᴘᴛ
-│
-└─────────────────────────◇   
+🤖 *${this.config.botName}*
 
-┌─────────────────────────────◇
-│ ᯓ Basic Commands :
-│     • /ping - Test bot response
-│     • /status - Status bot
-│     • /connection - Info koneksi
-│ 
-│ ᯓ Report Commands :
-│     • /tiktok report <target> - Mass report TikTok
-│     • /tiktok status - Status report TikTok
-│ 
-│ ᯓ Unlimited Commands :
-│     • /unlimited start - Start unlimited mode
-│     • /unlimited stop - Stop unlimited mode
-│ 
-│ ᯓ Owner Commands :
-│     • /restart - Restart bot
-│     • /broadcast <pesan> - Broadcast message
-│ 
-│ ᯓ Statistics :
-│     • Proxies: ${this.proxyList.length}
-│     • Reports: ${this.reportCount}
-│     • Success: ${this.successCount}
-└─────────────────────────◇
+📋 *DAFTAR COMMAND:*
+
+🔧 *Basic Commands:*
+/menu - Menampilkan menu ini
+/ping - Test bot response
+/status - Status bot
+/connection - Info koneksi
+
+🎯 *TikTok Commands:*
+/tiktok report <target> - Mass report TikTok
+/tiktok status - Status report TikTok
+
+⚡ *Unlimited Commands:*
+/unlimited start - Start unlimited mode
+/unlimited stop - Stop unlimited mode
+
+🛠️ *Owner Commands:* ${isOwner ? '✅' : '❌'}
+/restart - Restart bot
+/broadcast <pesan> - Broadcast message
+
+📊 *Statistics:*
+- Proxies: ${this.proxyList.length}
+- Reports: ${this.reportCount}
+- Success: ${this.successCount}
+
+💡 Version: ${this.menuConfig.version}
         `.trim();
 
         ctx.replyWithMarkdown(menuText);
@@ -454,7 +438,7 @@ Connection: ${this.bot ? '✅ Connected' : '❌ Disconnected'}
             }
             
             ctx.reply(`🚀 Memulai TikTok mass report untuk: ${target}`);
-            await this.executeTikTokMassReport(target, '1', 500);
+            await this.executeTikTokMassReport(target, '1', 50);
             
         } else if (action === 'status') {
             ctx.reply(`📊 TikTok Reports: ${this.tiktokReports.length} completed`);
@@ -829,7 +813,7 @@ Connection: ${this.bot ? '✅ Connected' : '❌ Disconnected'}
         
         const target = readline.question('Masukkan target untuk di-report: ');
         const reportType = readline.question('Jenis report (1: WhatsApp, 2: TikTok): ');
-        const count = parseInt(readline.question('Jumlah report: ')) || 500;
+        const count = parseInt(readline.question('Jumlah report: ')) || 50;
         
         if (reportType === '2') {
             await this.executeTikTokMassReport(target, '1', count);
